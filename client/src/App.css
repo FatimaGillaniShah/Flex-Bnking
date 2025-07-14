@@ -1,0 +1,820 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background-color: #fdf5fc;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container {
+  flex: 1;  
+  padding-top: 20px;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: #3b3a3a;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.navigation-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px; 
+}
+
+.navigation-left h2 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+}
+
+.navigation-right ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-right ul li {
+  display: inline;
+}
+
+.text-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.text-link:hover {
+  color: #dd9dd5; 
+}
+
+.navigation-right ul li.onClick {
+  cursor: pointer;
+}
+
+/* Main Content and Sections */
+.container .main {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.container .main .promo-image {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container .main .promo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.container .main .promo-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: #000;
+  transform: translate(-50%, -20%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.container .main .promo-text h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.container .main .promo-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.container .main .promo-text ul li {
+  margin-bottom: 10px;
+}
+
+.container .main .promo-text .open-account {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
+}
+
+.container .main .promo-text .open-account:hover {
+  background-color: #68736a;
+}
+
+.container .main .promo-text .reviews {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.container .main .promo-text .reviews span {
+  margin-right: 10px;
+}
+
+/* Form Styles */
+.Form {
+  margin: 10% auto;
+  max-width: 400px;
+  align-items: center;
+}
+
+.Form input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Form button {
+  margin: auto;
+  width: 20%;
+  display: inline-block;
+  padding: 10px;
+  align-items: center;
+  border: 2px gray;
+  border-radius: 6px;
+}
+
+.Form button:hover {
+  color: darkslategrey;
+}
+
+.Form h3 {
+  text-align: center;
+  margin: 10px;
+}
+
+/* Bank Accounts and Transaction Styles */
+.Bank_Accounts {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Bank_Accounts h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.AccountsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.AccountsTable th, .AccountsTable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.AccountsTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.AccountsTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.AccountsTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.Transcation h3 {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.Transcation {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.Transcation h2 {
+  margin: 10px;
+}
+
+.dropbox select {
+  width: 100%;
+  margin: 10px;
+  padding: 12px 10px;
+}
+
+.Transcation .lower {
+  display: inline-block;
+  margin: 10px;
+  max-width: 600px;
+}
+
+.Transcation .lower input {
+  padding: 12px 10px;
+  width: 100%;
+}
+
+.Transcation button {
+  margin: 10px 0px;
+}
+
+/* Popular Banking Solutions */
+.banking-solutions {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.banking-solutions h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.banking-solutions p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.banking-solutions .tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.banking-solutions .tabs .tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e0e0e0;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.banking-solutions .tabs .tab.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.banking-solutions .content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.banking-solutions .section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.banking-solutions .section h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banking-solutions .section h3 svg {
+  margin-right: 8px;
+}
+
+.banking-solutions .section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.banking-solutions .section ul li {
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+/* BankingSolutions.css */
+.banking-solutions {
+  text-align: center;
+  background-color: #fff;
+  margin: 40px 0;
+}
+
+.banking-solutions h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.banking-solutions .highlight {
+  color: #000; 
+}
+
+.solutions-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.solution {
+  flex: 1;
+  max-width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.solution .icon {
+  font-size: 40px;
+  color: #000;
+  margin-bottom: 10px;
+}
+/* Business Promo */
+.business-promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.business-promo .promo-text {
+  max-width: 50%;
+}
+
+.business-promo .promo-image {
+  max-width: 50%;
+}
+
+.business-promo .promo-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Styles */
+.home {
+  background-color: #fdf5fc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* About Us */
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-us-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-us-header h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.about-us-header p {
+  font-size: 18px;
+  color: #777;
+}
+
+.about-us-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about-us-section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.about-us-image {
+  width: 300px;
+  height: auto;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+
+.about-us-text {
+  max-width: 600px;
+}
+
+.about-us-text h2 {
+  font-size: 28px;
+  color: #444;
+}
+
+.about-us-text p {
+  font-size: 16px;
+  color: #666;
+}
+
+.about-us-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about-us-footer h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.about-us-footer p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Dashboard */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;  
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.dashboard-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.dashboard-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.dashboard-card h3 {
+  font-size: 1.8rem;
+  color: #34495e;
+}
+
+.dashboard-card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.dashboard-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-button:hover {
+  background-color: #5d676e;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Login and Signup */
+.login-container, .signup-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2, .signup-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-btn, .signup-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-btn:hover, .signup-btn:hover {
+  background-color: #505458;
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icons {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.social-icons > div {
+  width: 100% !important; 
+}
+
+.social-icons iframe {
+  width: 100% !important; 
+}
+
+/* Transactions */
+.Transactions {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Transactions h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.TransactionsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.TransactionsTable th, .TransactionsTable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.TransactionsTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.TransactionsTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.TransactionsTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Transfer Form */
+.TransferForm {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.TransferForm h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.TransferForm-dropbox, .TransferForm-lower {
+  margin-bottom: 20px;
+}
+
+.TransferForm-input-group {
+  margin-bottom: 15px;
+}
+
+.TransferForm-input-group h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.TransferForm-button-container {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+.TransferForm-button {
+  width: 90%;
+  padding: 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+}
+
+.TransferForm-button:hover {
+  background-color: #4f5154;
+}
+
+/* Add Account Form */
+.AddAccountForm {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.AddAccountForm-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.AddAccountForm-input-group {
+  margin-bottom: 15px;
+}
+
+.AddAccountForm-input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.AddAccountForm-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.AddAccountForm-button {
+  width: 90%;
+  padding: 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+}
+
+.AddAccountForm-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.AddAccountForm-button:hover:not(:disabled) {
+  background-color: #4f5154;
+}
+
+.AddAccountForm-error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #3b3a3a;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+  flex-shrink: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  color: #fff;
+}
+
+.footer-nav {
+  margin-top: 10px;
+}
+
+.footer-link {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+
